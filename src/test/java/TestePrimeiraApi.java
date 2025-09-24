@@ -16,6 +16,6 @@ public class TestePrimeiraApi {
                     .log().all()
                     .assertThat() // pegar o que é esperado e retornar
                     .statusCode(200)
-                    .body(Matchers.equalTo("Retorno da api com sucesso!!!")); // Corrigido aqui
+                    .body(Matchers.equalTo("Retorno da api com sucesso!!!"));
     }
 }
