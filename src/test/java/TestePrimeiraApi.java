@@ -26,8 +26,6 @@ public class TestePrimeiraApi {
 
         RestAssured.given()
 
-                        //.queryParam("palavra","Teste1")
-                        .queryParam("palavra",textoQueryParam)
                         .log().all()
                     .when()
                         .get(url)
