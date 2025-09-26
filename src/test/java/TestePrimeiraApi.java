@@ -38,4 +38,22 @@ public class TestePrimeiraApi {
                         .body(Matchers.equalTo(textoQueryParam));
     }
 
+    @Test
+    public void Exe_PrimeiraApiParam() {
+        String textPathParam = "teste3%20Academy";
+        String url = "http://localhost:8080/api/primeiraApiV2/" +textPathParam;
+
+
+        RestAssured.given()
+                        .log().all()
+                    .when()
+                        .get(url)
+                    .then()
+                        .log().all()
+                        .assertThat() // pegar o que é esperado e retornar
+                        .statusCode(200)
+                        .body(Matchers.equalTo(textPathParam));
+    }
+
+
 }
